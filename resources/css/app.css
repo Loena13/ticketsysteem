@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*contact nav*/
+.container-fluid
+{
+    display: flex;
+    align-items: center;
+}
+.contactnav a
+{
+    color: #84594a;
+    font-size: medium;
+    text-decoration: none;
+}
+
+#name
+{
+    background-color: #fecace;
+    color: #84594a;
+}
+
+[type='text']
+{
+    border-color: #541b18;
+}
+
+.form-control
+{
+    border-color: #541b18;
+}
+
+.btn
+{
+    background-color: #fecace;
+}
+
+.btn :hover
+{
+    background-color: #ffb7bd;
+}
+
+.form-group
+{
+    color: #84594a;
+}
+/*other*/
+nav{
+   background-color:#fecace; 
+}
+
+.navbar-brand
+{
+    color: #84594a;
+}
+
+.nav-link
+{
+    color: #84594a;
+}
+
+.nav-item
+{
+    color: #84594a;
+}
+
+.navbar-brand :hover
+{
+    color: #541b18;
+}
+
+.nav-link :hover
+{
+    color: #541b18;
+}
+
+.nav-item :hover
+{
+    color: #541b18;
+}
+
+#aboutus
+{
+    color: #84594a;
+}
+
+#aboutus :hover
+{
+    color: #541b18;
+}
+
+#dropdown
+{
+    color: #84594a;
+}
+
+.dropdown-item
+{
+    color: #84594a;
+}
+
+.dropdown-menu
+{
+    background-color: #fecace;
+}
+
+.dropdown-menu :hover
+{
+    background-color: #ffb7bd;
+}
+
+img
+{
+    margin-right: 5px;
+}
+
+#aboutusimg
+{
+    border-radius: 10%;
+}
+
+#homeimg
+{
+    margin-top: 10px;
+    border-radius: 10%;
+}
+
+.container
+{
+    margin-top: 10px;
+}
+
+#search
+{
+    color: #84594a;
+    border-color: palevioletred;
+}
+
+#searchbar
+{
+    border-color: palevioletred;
+    background-color: #fecace;
+    color: #84594a;
+}
+
+[role=search]
+{
+    background-color:lightpink;
+}
+
+#eventinfo
+{
+    margin-right: 5px;
+}
+
+#order
+{
+    background-color: #ffb7bd;
+    margin-top: 5px;
+}
+
+#submit
+{
+    background-color: #ffb7bd;
+}
+
+h1
+{
+    color: #541b18;
+}
+
+.aboutus 
+{
+    display: flex;
+}
+  
+aboutus p 
+{
+    font-size: 20px;
+    color: #541b18;
+    margin-top: 5px;
+}
+
+/*Login and Register*/
+#loginimg
+{
+    margin-left: 230px;
+}
+
+#registerimg
+{
+    margin-left: 230px;
+}
+
+#button
+{
+    background-color: #fecace;
+    color: #84594a;
+}
+
+#button :hover
+{
+    background-color:#ffb7bd;
+    color: #541b18;
+}
+
+#email
+{
+    color: #84594a;
+}
+
+#pass
+{
+    color: #84594a;
+}
+
+#pass2
+{
+    color: #84594a;
+}
+
+#remember 
+{
+    color: #84594a;
+}
+
+#forget
+{
+    color:#84594a
+}
+
+#remember_me
+{
+    background-color: #ffb7bd;
+}
+
+#Rname
+{
+    color: #84594a;
+}
+
+/*footer*/
+.footer
+{
+    margin-top: 74px;
+}
+p
+{
+    color: #541b18;
+}
+
+span
+{
+    color: #541b18;
+}
+
+h6
+{
+    color: #84594a;
+}
+
+#footertext
+{
+    color: #84594a;
+}
+
