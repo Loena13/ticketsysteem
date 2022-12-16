@@ -16,8 +16,10 @@
                 
                         <a href={{ route ('edit', $event->id) }} class="btn">Edit Tickets</a>
 
-                        <form>
-                            <button action="{{ route ('delete', $event->id) }}" class="btn">Delete Tickets</button>
+                        <form action="{{ route ('delete', $event->id) }}" method="post">
+                            @method('delete')
+                            @csrf
+                            <button type="submit" class="btn">Delete Tickets</button>
                         </form>
                     @endif
                 </div>
