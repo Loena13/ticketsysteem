@@ -12,6 +12,7 @@
 <body>
     <h1>Welkom op mijn cute af pagina</h1>
     <img src="img/home.gif" width="20%" height="20%" id="homeimg">
+    <img src="img/home.jpg" width="20%" height="20%" id="homeimg">
 </body>
 </html>
 @endsection

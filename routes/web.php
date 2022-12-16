@@ -3,6 +3,8 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutusController;
+use App\Http\Controllers\EditController;
+use App\Http\Controllers\DeleteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +29,11 @@ Route::post('contact_form',[ContactController::class, 'contact_form']);
 Route::get('aboutus',[AboutusController::class, 'aboutus'])->name('aboutus');
 
 Route::get('/events', [PagesController::class, 'events'])->name('events');
+
+Route::get('edit/{id}',[EditController::class, 'edit'])->name('edit');
+Route::post('edit/{id}',[EditController::class, 'update'])->name('update');
+
+Route::delete('delete/{id}',[DeleteController::class, 'delete'])->name('delete');
 
 
 

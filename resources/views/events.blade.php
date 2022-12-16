@@ -10,11 +10,18 @@
                 <p class="card-text"><b id="eventinfo">Einddatum:</b>{{$event->event_end}}</p>
                 <p class="card-text"><b id="eventinfo">Location:</b>{{$event->location}}</p>
                 <p class="card-text"><b id="eventinfo">Preorder prijs:</b>{{$event->preorder_price}}</p>
-                <a href="checkout" class="btn">Bestel Tickets!</a>
-                @if (Auth::user())
-                <a href="edit" class="btn">Edit Tickets</a>
-                <a href="delete" class="btn">Delete Ticket</a>
-                @endif
+                <div class="form-button">
+                    <a href="checkout" class="btn">Bestel Tickets!</a>
+                    @if (Auth::user())
+                
+                        <a href={{ route ('edit', $event->id) }} class="btn">Edit Tickets</a>
+
+                        <form>
+                            <button action="{{ route ('delete', $event->id) }}" class="btn">Delete Tickets</button>
+                        </form>
+                    @endif
+                </div>
+                   
             </div>
         </div>
     </div>
