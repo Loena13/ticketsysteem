@@ -19,7 +19,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{ route ('events') }}">Events</a></li>
-            @if (Auth::user())
+            @if (Auth::user()->is_admin)
             <li><a class="dropdown-item" href="add-blog-post-form">Add event</a></li>
             @endif
             <li><hr class="dropdown-divider"></li>
