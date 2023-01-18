@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="aboutus">
-        <img src="img/aboutus.jpg" width="20%" height="20%" id="aboutusimg">
+        <img src="img/aboutus.jpg" width="80%" height="80%" id="aboutusimg">
         <p>Pandamusic is your go-to destination for all your event ticket needs. We offer a wide variety of tickets to some of the most popular events happening around the world, from music festivals to concerts.Our goal is to provide our customers with the best prices for event tickets, and we are committed to making sure that you get the best prices.
 
             In addition to providing great prices, we also make it easy for you to preorder tickets. This means that you can secure your spot at an event before tickets even go on sale to the general public. Whether you're a die-hard fan looking to catch your favorite band or sports team, or you're just looking for a fun night out, Pandamusic has you covered.

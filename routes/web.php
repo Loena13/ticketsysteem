@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutusController;
 use App\Http\Controllers\EditController;
 use App\Http\Controllers\DeleteController;
+use App\Http\Controllers\TicketsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\Admin;
 
@@ -35,5 +36,8 @@ Route::get('edit/{id}',[EditController::class, 'edit'])->name('edit')->middlewar
 Route::post('edit/{id}',[EditController::class, 'update'])->name('update')->middleware('auth', 'Admin');
 
 Route::delete('delete/{id}',[DeleteController::class, 'delete'])->name('delete')->middleware('auth', 'Admin');
+
+Route::get('tickets', [TicketsController::class, 'tickets'])->name('tickets');
+Route::post('display_tickets', [TicketsController::class, 'display_tickets'])->name('display_tickets');
 
 require __DIR__.'/auth.php';

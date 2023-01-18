@@ -19,11 +19,12 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{ route ('events') }}">Events</a></li>
-            @if (Auth::user()->is_admin)
+            @if(Auth::user())
+            <li><a class="dropdown-item" href="{{ route ('tickets') }}">Jouw tickets</a></li>
+            @if(Auth::user()->is_admin)
             <li><a class="dropdown-item" href="add-blog-post-form">Add event</a></li>
             @endif
             <li><hr class="dropdown-divider"></li>
-            @if (Auth::user())
               <li class="nav-item">
                 <form action="{{ route ('logout') }}" method="POST">
                   @csrf
@@ -31,6 +32,7 @@
                 </form>
               </li>
             @else
+            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="{{ route ('login') }}">Login</a></li>
             <li><a class="dropdown-item" href="{{ route ('register') }}">Register</a></li>
             @endif

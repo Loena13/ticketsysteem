@@ -33,7 +33,7 @@
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Photo</label>
-          <input type="text" id="photo" name="photo" class="form-control" required="">
+          <input type="file" id="image" name="image" class="form-control" accept="image/jpg , image/gif, image/jpeg" >
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Eventstart</label>
