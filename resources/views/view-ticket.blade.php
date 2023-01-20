@@ -9,7 +9,7 @@
             @if (Auth::user()->id == $ticket->user_id && $ticket->event_id == $event->id) 
             
                 <div class="card m-10" style="width: 18rem;">
-                    <img src="{{$event->photo}}" class="card-img-top" alt="event picture">
+                    <img src="{{$event->foto}}" class="card-img-top" alt="event picture">
                     <div class="card-body">
                         <h5 class="card-title">{{$event->name}}</h5>
                         <p class="card-text">Beschrijving: {{$event->description}}</p>
