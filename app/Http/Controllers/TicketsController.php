@@ -25,8 +25,8 @@ class TicketsController extends Controller
         return view ('buy');
     }
 
-    public function createTickets(Request $request){
 
+    public function createTickets(Request $request){
         $tickets = Ticket::all();
         $request;
         $newTicket = new Ticket();

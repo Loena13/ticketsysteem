@@ -11,16 +11,20 @@
                 <p class="card-text"><b id="eventinfo">Location:</b>{{$event->location}}</p>
                 <p class="card-text"><b id="eventinfo">Preorder prijs:</b>{{$event->preorder_price}}</p>
                 <div class="form-button">
-                    <a href="view-ticket" class="btn">Bestel Tickets!</a>
+                    <form action="{{ Route('display_tickets') }}" method="POST">
+                        @csrf
+                        <input type="hidden" id="event" name="event" value="{{$event->id}}">
+                        <button type="submit" class="btn">Bestel tickets!</button>
+                    </form>
                     @if (Auth::user())
                     @if (Auth::user()->is_admin)
                 
-                        <a href={{ route ('edit', $event->id) }} class="btn">Edit Tickets</a>
+                        <a href={{ route ('edit', $event->id) }} class="btn">Edit Events</a>
 
                         <form action="{{ route ('delete', $event->id) }}" method="post">
                             @method('delete')
                             @csrf
-                            <button type="submit" class="btn">Delete Tickets</button>
+                            <button type="submit" class="btn">Delete Events</button>
                         </form>
                     @endif
                     @endif
