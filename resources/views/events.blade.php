@@ -11,7 +11,7 @@
                 <p class="card-text"><b id="eventinfo">Location:</b>{{$event->location}}</p>
                 <p class="card-text"><b id="eventinfo">Preorder prijs:</b>{{$event->preorder_price}}</p>
                 <div class="form-button">
-                    <a href="tickets" class="btn">Bestel Tickets!</a>
+                    <a href="view-ticket" class="btn">Bestel Tickets!</a>
                     @if (Auth::user())
                     @if (Auth::user()->is_admin)
                 

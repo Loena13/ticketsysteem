@@ -1,23 +1,54 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Tickets;
+
 use Illuminate\Http\Request;
+use App\Models\Ticket;
+use App\Models\Event;
+use Illuminate\Support\Facades\Auth;
+
 
 class TicketsController extends Controller
 {
-    public function tickets()
+        public function viewTicket()
     {
-        return view('tickets');
+        $tickets = Ticket::all();
+        $event = Event::all();
+
+        return view('view-ticket',[
+            'tickets' => $tickets,
+            'events' => $event
+        ]);
     }
 
-    public function display_ticket(Request $request)
+    public function viewbuy(){
+        return view ('buy');
+    }
+
+    public function createTickets(Request $request){
+
+        $tickets = Ticket::all();
+        $request;
+        $newTicket = new Ticket();
+        $newTicket->user_id = Auth::user()->id;
+        $newTicket->event_id = $request->input('event');
+        $newTicket->save();
+
+        return redirect('view-ticket');
+    }
+
+    public function editTicket(Request $request, $Ticketid)
     {
-        $ticket = new Tickets;
-        $ticket->user_id = $request->user_id;
-        $ticket->qr_hash = $request->qr_hash;
-        $ticket->event_id = $request->event_id;
+        $ticket = Ticket::findorFail($Ticketid);
+       
         $ticket->save();
-        return redirect('/')->with('status', 'Ticket bought');
+    }
+    
+    public function delete($Ticketid)
+    {
+        $ticket = Ticket::findorFail($Ticketid);
+        $ticket->delete();
+
+        return redirect('view-ticket');
     }
 }

@@ -37,7 +37,8 @@ Route::post('edit/{id}',[EditController::class, 'update'])->name('update')->midd
 
 Route::delete('delete/{id}',[DeleteController::class, 'delete'])->name('delete')->middleware('auth', 'Admin');
 
-Route::get('tickets', [TicketsController::class, 'tickets'])->name('tickets');
-Route::post('display_tickets', [TicketsController::class, 'display_tickets'])->name('display_tickets');
+Route::get('/view-ticket', [TicketsController::class, 'viewTicket'])->middleware(['auth'])->name('view-tickets');
+Route::post('display_tickets', [TicketsController::class, 'createTickets'])->name('display_tickets');
+Route::get('/delete-ticket/{id}', [TicketsController::class, 'delete'])->name('delete_ticket');
 
 require __DIR__.'/auth.php';
